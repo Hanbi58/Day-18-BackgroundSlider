@@ -12,7 +12,7 @@ function increaseSlideBg() {
     slide.classList.remove("active");
   });
   actIdx++;
-  if (actIdx > 3) {
+  if (actIdx > slides.length - 1) {
     actIdx = 0;
     slides[0].classList.add("active");
   } else {
@@ -26,7 +26,7 @@ function decreaseSlideBg() {
   });
   actIdx--;
   if (actIdx < 0) {
-    actIdx = 3;
+    actIdx = slides.length - 1;
     slides[3].classList.add("active");
   } else {
     slides[actIdx].classList.add("active");
