@@ -2,7 +2,9 @@ const slides = document.querySelectorAll(".slide");
 const body = document.body;
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
-let actIdx = 0;
+
+rows = Array.from(slides);
+let actIdx = rows.findIndex((row) => row.classList.contains("active"));
 
 rightBtn.addEventListener("click", increaseSlideBg);
 leftBtn.addEventListener("click", decreaseSlideBg);
